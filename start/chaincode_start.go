@@ -71,4 +71,4 @@ func (t *SimpleChaincode) Query(stub *shim.ChaincodeStub, function string, args 
 	fmt.Println("query did not find func: " + function)						//error
 
 	return nil, errors.New("Received unknown function query")
-}
+
