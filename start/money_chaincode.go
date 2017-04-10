@@ -347,7 +347,7 @@ func (t *SimpleChaincode) open_trade(stub shim.ChaincodeStubInterface, args []st
 		return nil, errors.New("Incorrect number of arguments. Expecting an odd number")
 	}
 
-	size1, err := strconv.Atoi(args[2])
+	number1, err := strconv.Atoi(args[2])
 	if err != nil {
 		return nil, errors.New("3rd argument must be a numeric string")
 	}
