@@ -362,7 +362,7 @@ func (t *SimpleChaincode) open_trade(stub shim.ChaincodeStubInterface, args []st
 	err = stub.PutState("_debug1", jsonAsBytes)
 
 	for i:=3; i < len(args); i++ {
-		will_size, err = strconv.Atoi(args[i + 1])
+		will_number, err = strconv.Atoi(args[i + 1])
 		if err != nil {
 			msg := "is not a numeric string " + args[i + 1]
 			fmt.Println(msg)
