@@ -356,7 +356,7 @@ func (t *SimpleChaincode) open_trade(stub shim.ChaincodeStubInterface, args []st
 	open.User = args[0]
 	open.Timestamp = makeTimestamp()
 	open.Want.Value = args[1]
-	open.Want.Number =  size1
+	open.Want.Number =  number1
 	fmt.Println("- start open trade")
 	jsonAsBytes, _ := json.Marshal(open)
 	err = stub.PutState("_debug1", jsonAsBytes)
